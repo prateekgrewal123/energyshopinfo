@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Account | HARSH CHAUHAN Shop</title><link rel="stylesheet" href="assets/style.css"><script src="assets/shop.js" defer></script></head><body><div class="topbar"><div class="container"><span><strong>HARSH CHAUHAN</strong> Shop</span><span>Cash on Delivery Available</span></div></div><header>
+<div class="container nav">
+<a class="brand" href="index.html"><span class="brandmark">E</span><span>HARSH CHAUHAN<small>UTILITY & SHOP</small></span></a>
+<button class="menu" type="button">Menu</button>
+<nav>
+<a href="index.html">Home</a>
+<a href="duke-energy-bill.html">Bills</a>
+<a href="duke-energy-bill-pay.html">Pay Bill</a>
+<a href="blog.html">Blog</a>
+<a href="shop.html">Shop</a>
+<a href="account.html">Account</a>
+<a href="cart.html">Cart <span id="cartCount">0</span></a>
+<a class="nav-cta" href="contact.html">Contact</a>
+</nav>
+</div>
+</header><main><section><div class="container"><div class="account-box"><h1>Account</h1><div class="account-tabs"><button onclick="showAccount('login')">Login</button><button onclick="showAccount('create')">Create Account</button></div><div id="accountArea"></div><div id="ordersBox" style="margin-top:25px"></div></div></div></section></main><footer>
+<div class="container footer-grid">
+<div><h3>HARSH CHAUHAN</h3><p>Independent informational resources and a separate online shop.</p></div>
+<div><h4>All Pages</h4><ul>
+<li><a href="index.html">Home</a></li><li><a href="duke-energy-bill.html">Bills</a></li><li><a href="duke-energy-bill-pay.html">Pay Bill</a></li><li><a href="duke-energy-login.html">My Account</a></li><li><a href="payment-help.html">Payment Help</a></li><li><a href="duke-energy-outage.html">Outages</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li>
+</ul></div>
+<div><h4>Shop</h4><ul><li><a href="shop.html">Shop All</a></li><li><a href="cart.html">Cart</a></li><li><a href="account.html">Account</a></li><li><a href="checkout.html">Checkout</a></li></ul></div>
+<div><h4>Company & Policies</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="how-it-works.html">How It Works</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms & Conditions</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="shipping.html">Shipping Policy</a></li><li><a href="returns.html">30-Day Return Policy</a></li></ul></div>
+</div>
+<div class="container footer-bottom"><p>© 2026 HARSH CHAUHAN. All rights reserved.</p>
+<p><strong>Third-Party Non-Affiliation Disclaimer:</strong> HARSH CHAUHAN is an independent informational resource. We are not affiliated with, endorsed by, sponsored by, or associated with Duke Energy or any of its subsidiaries. All trademarks, service marks, logos, and brand names—including “Duke Energy”—are the property of their respective owners and are used on this website strictly for nominative, identification, and informational purposes only.</p></div>
+</footer><script>
+function users(){try{return JSON.parse(localStorage.getItem("hc_users")||"[]")}catch(e){return[]}}
+function showAccount(m){let a=document.querySelector("#accountArea");a.innerHTML=m==="create"?`<form class="form-grid" onsubmit="createUser(event)"><label>Name</label><input id="aname" required><label>Email</label><input id="aemail" type="email" required><label>Password</label><input id="apass" type="password" required minlength="4"><button class="btn primary">Create Account</button></form>`:`<form class="form-grid" onsubmit="loginUser(event)"><label>Email</label><input id="lemail" type="email" required><label>Password</label><input id="lpass" type="password" required><button class="btn primary">Login</button></form>`}
+function createUser(e){e.preventDefault();let u=users(),email=document.querySelector("#aemail").value.trim().toLowerCase();if(u.some(x=>x.email===email))return alert("Account already exists.");let x={name:document.querySelector("#aname").value.trim(),email,password:document.querySelector("#apass").value};u.push(x);localStorage.setItem("hc_users",JSON.stringify(u));localStorage.setItem("hc_user",JSON.stringify(x));location.reload()}
+function loginUser(e){e.preventDefault();let email=document.querySelector("#lemail").value.trim().toLowerCase(),pass=document.querySelector("#lpass").value,x=users().find(x=>x.email===email&&x.password===pass);if(!x)return alert("Incorrect email or password.");localStorage.setItem("hc_user",JSON.stringify(x));location.reload()}
+document.addEventListener("DOMContentLoaded",()=>{let u=JSON.parse(localStorage.getItem("hc_user")||"null");if(u)document.querySelector("#accountArea").innerHTML=`<h2>Welcome, ${u.name}</h2><p>${u.email}</p><button class="btn secondary" onclick="localStorage.removeItem('hc_user');location.reload()">Log Out</button>`;else showAccount("login")})
+</script><script>
+document.addEventListener("DOMContentLoaded",()=>{const b=document.querySelector("#ordersBox");if(!b)return;let os=JSON.parse(localStorage.getItem("hc_orders")||"[]");b.innerHTML="<h2>My Orders</h2>"+(os.length?os.slice().reverse().map(o=>`<p><strong>${o.id}</strong> — ${o.status} — $${Number(o.total).toFixed(2)}</p>`).join(""):"<p class='mini-note'>No orders yet.</p>")});
+</script></body></html>
