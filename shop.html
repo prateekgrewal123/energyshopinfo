@@ -1,55 +1,56 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pay Bill Information | HARSH CHAUHAN</title>
-<style>
-:root{--blue:#0781a4;--deep:#056687;--text:#465661;--line:#d5dce0;--green:#008f4c}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff}.top{height:5px;background:#075f79}
-.header{height:112px;display:flex;align-items:center;padding:0 5%;border-bottom:1px solid #ddd}.brand{display:flex;align-items:center;gap:13px;color:#075f79;font-size:28px;font-weight:700;line-height:.9}.logo-img{width:164px;height:auto;max-height:62px;object-fit:contain;display:block}.brand-fallback{display:none}.mark{width:46px;height:46px;border:6px solid #35a96d;border-radius:50%;position:relative}.mark:after{content:"";position:absolute;width:7px;height:55px;left:16px;top:-9px;background:#1688a5;transform:rotate(35deg);border-radius:8px}.divider{height:54px;width:1px;background:#d5dadd;margin:0 30px}.home{font-size:30px;color:#075f79}.right{margin-left:auto;display:flex;gap:28px;color:#006e94}.signin{background:#087d9f;color:white;padding:15px 20px;border-radius:7px;font-weight:700}
-.nav{height:70px;background:#056687;color:#fff;display:flex;justify-content:center;gap:90px;align-items:center;font-weight:700;font-size:18px}.hero{text-align:center;padding:48px 20px 35px;background:linear-gradient(#f5fafc,#fff)}.hero h1{font-size:55px;font-weight:400;margin:0 0 10px;color:#4c616d}.hero p{font-size:20px;margin:0}.disc{max-width:1000px;margin:20px auto 0;padding:13px 18px;text-align:left;background:#fff7df;border:1px solid #efd58b;border-radius:7px;font-size:14px;line-height:1.5}
-.panel{max-width:900px;margin:30px auto 70px;padding:35px 45px;border:1px solid #d8dde1;border-radius:5px;box-shadow:0 3px 14px #0000000d}.progress{display:flex;max-width:330px;margin:0 auto 50px}.step{width:50%;text-align:center;font-size:18px;position:relative}.step:before{content:"";display:block;width:30px;height:30px;border-radius:50%;margin:0 auto 8px;background:#d8dde0;border:5px solid #d8dde0}.step.active:before{background:#fff;border-color:var(--green)}.step:first-child:after{content:"";position:absolute;top:15px;left:calc(50% + 15px);width:calc(100% - 30px);height:5px;background:#d8dde0}.stage{display:none}.stage.active{display:block}.stage h2{text-align:center;font-size:34px;font-weight:400;margin:0 0 30px;color:#4b5b66}.locations{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.location{border:0;background:none;cursor:pointer;color:#087a9d;font-size:18px}.icon{width:96px;height:96px;margin:0 auto 14px;border-radius:50%;background:#056687;color:#fff;display:grid;place-items:center;font-size:20px;font-weight:700}.location:hover .icon{background:#0086a8;transform:translateY(-2px)}.choice-list{border:1px solid #d5d9dc;border-radius:7px;overflow:hidden}.choice{display:flex;align-items:center;gap:18px;padding:22px 20px;border-bottom:1px solid #d5d9dc;cursor:pointer;font-size:20px}.choice:last-child{border-bottom:0}.choice input{width:30px;height:30px;accent-color:#0781a4}.choice-icon{margin-left:auto;width:40px;height:40px;border-radius:50%;background:#e1f4f8;color:#007da5;display:grid;place-items:center;font-weight:700}.actions{text-align:center;margin-top:35px}button.primary{border:0;background:#0781a4;color:#fff;padding:16px 80px;border-radius:6px;font-size:19px;font-weight:700;cursor:pointer}.cancel{display:block;margin-top:30px;color:#007da5;text-decoration:underline;cursor:pointer}.input{max-width:600px;margin:auto}.input label{display:block;font-weight:700;margin-bottom:9px}.input input{width:100%;padding:16px;border:1px solid #c9d0d5;border-radius:5px;font-size:18px}.notice{max-width:650px;margin:auto;padding:22px;background:#f5f8fa;border:1px solid #d7e0e5;border-radius:7px;line-height:1.6;text-align:center}.notice strong{display:block;font-size:20px;margin-bottom:8px}.official{display:inline-block;margin-top:15px;background:#0781a4;color:#fff;padding:13px 24px;border-radius:5px;text-decoration:none;font-weight:700}
-@media(max-width:800px){.header{height:auto;padding:18px 20px}.right{display:none}.divider{margin:0 15px}.home{font-size:22px}.nav{gap:15px;height:auto;padding:15px;flex-wrap:wrap;font-size:14px}.hero h1{font-size:38px}.panel{margin:20px 14px 50px;padding:25px 18px}.locations{grid-template-columns:repeat(2,1fr)}}
-</style>
-</head>
-<body>
-<div class="top"></div>
-<header class="header"><div class="brand"><img class="logo-img" src="https://www.duke-energy.com/-/media/images/common/logoduke.svg?rev=57363dbfba5749b890df2442f1e66c85" alt="Duke Energy logo"><span class="brand-fallback">HARSH<br>CHAUHAN</span></div><div class="divider"></div><div class="home">For Your Home</div><div class="right"><span>⌕ Search</span><span class="signin">👤 Sign in / Register</span></div></header>
-<nav class="nav"><span>My Account ▾</span><span>Savings &amp; Solutions</span><span>Start, Stop &amp; Move ▾</span><span>Outages</span><span>Customer Service</span></nav>
-<section class="hero"><h1>Pay Bill</h1><p>Find payment information and official resources for your service location.</p></section>
-<main class="panel">
-<div class="progress"><div class="step active" id="p1">Find Location</div><div class="step" id="p2">Account Help</div></div>
-<section class="stage active" id="s1"><h2>Select your location</h2><p style="text-align:center;font-size:18px">Select the location of your service to continue.</p><div class="locations">
-<button class="location" data-state="North Carolina"><div class="icon">NC</div>North Carolina ›</button>
-<button class="location" data-state="South Carolina"><div class="icon">SC</div>South Carolina ›</button>
-<button class="location" data-state="Ohio"><div class="icon">OH</div>Ohio ›</button>
-<button class="location" data-state="Kentucky"><div class="icon">KY</div>Kentucky ›</button>
-<button class="location" data-state="Indiana"><div class="icon">IN</div>Indiana ›</button>
-<button class="location" data-state="Florida"><div class="icon">FL</div>Florida ›</button>
-</div></section>
-<section class="stage" id="s2"><h2>Select one option below to find your account.</h2><div class="choice-list">
-<label class="choice"><input type="radio" name="lookup" value="Account Number"><span>Account Number</span><span class="choice-icon">#</span></label>
-<label class="choice"><input type="radio" name="lookup" value="Phone Number"><span>Phone Number</span><span class="choice-icon">☎</span></label>
-</div><div class="actions"><button class="primary" id="continue">Continue</button><span class="cancel" id="cancel">Cancel</span></div></section>
-<section class="stage" id="s3"><h2>Enter your information</h2><div class="input"><label id="label">Information</label><input id="value" type="text" autocomplete="off"></div><div class="actions"><button class="primary" id="submit">Continue</button><span class="cancel" id="back">Back</span></div></section>
-<section class="stage" id="s4"><h2>Account assistance</h2><div class="notice"><strong>There appears to be an issue with your utility account.</strong>Call us now and an expert will assist you with your bill payment and help you resolve any account-related issues..<br>
-
-<a class="official call-button" href="tel:+18333004738">
-  <span>Call Now</span><br>
-  (833) 300-4738
-</a>
-
-
-</div><div class="actions"><span class="cancel" id="restart">Start Over</span></div></section>
-</main>
+<!doctype html><html lang="en"><head>
+  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18360297895"></script>
 <script>
-let type="";
-const show=n=>{document.querySelectorAll(".stage").forEach((x,i)=>x.classList.toggle("active",i===n-1));document.getElementById("p1").classList.toggle("active",n<=2);document.getElementById("p2").classList.toggle("active",n>=3);window.scrollTo({top:0,behavior:"smooth"})};
-document.querySelectorAll(".location").forEach(x=>x.onclick=()=>show(2));
-document.querySelectorAll('input[name="lookup"]').forEach(x=>x.onchange=()=>type=x.value);
-document.getElementById("continue").onclick=()=>{if(!type)return alert("Please select Account Number or Phone Number.");document.getElementById("label").textContent=type;document.getElementById("value").placeholder=type==="Phone Number"?"Enter phone number":"Enter account number";document.getElementById("value").value="";show(3)};
-document.getElementById("submit").onclick=()=>{if(!document.getElementById("value").value.trim())return alert("Please enter the requested information.");show(4)};
-document.getElementById("cancel").onclick=()=>show(1);document.getElementById("back").onclick=()=>show(2);document.getElementById("restart").onclick=()=>show(1);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18360297895');
 </script>
-</body></html>
+  
+  
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shop | HARSH CHAUHAN</title><link rel="stylesheet" href="assets/style.css"><script src="assets/shop.js" defer></script></head><body><header>
+<div class="container nav">
+<a class="brand" href="index.html"><span class="brandmark">E</span><span>HARSH CHAUHAN<small>UTILITY & SHOP</small></span></a>
+<button class="menu" type="button">Menu</button>
+<nav>
+<a href="index.html">Home</a>
+<a href="duke-energy-bill.html">Bills</a>
+<a href="duke-energy-bill-pay.html">Pay Bill</a>
+<a href="blog.html">Blog</a>
+<a href="shop.html">Shop</a>
+<a href="account.html">Account</a>
+<a href="cart.html">Cart <span id="cartCount">0</span></a>
+<a class="nav-cta" href="contact.html">Contact</a>
+</nav>
+</div>
+</header><main><section class="shop-hero"><div class="container"><span class="eyebrow">ONLINE SHOP</span><h1>Quality Products for Your Everyday Needs</h1><p class="lead">Browse the Made in USA collection and view the current product name, image, price and product information directly from the source catalog.</p></div></section><section><div class="container" style="padding:50px 0"><div class="section-head"><h2>Shop Products</h2><p>Cash on Delivery available at checkout.</p></div><div id="shopProducts" class="shop-grid"><div class="empty">Loading products…</div></div></div></section></main><footer>
+<div class="container footer-grid">
+<div><h3>HARSH CHAUHAN</h3><p>Independent informational resources and a separate online shop.</p></div>
+<div><h4>All Pages</h4><ul>
+<li><a href="index.html">Home</a></li><li><a href="duke-energy-bill.html">Bills</a></li><li><a href="duke-energy-bill-pay.html">Pay Bill</a></li><li><a href="duke-energy-login.html">My Account</a></li><li><a href="payment-help.html">Payment Help</a></li><li><a href="duke-energy-outage.html">Outages</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li>
+</ul></div>
+<div><h4>Shop</h4><ul><li><a href="shop.html">Shop All</a></li><li><a href="cart.html">Cart</a></li><li><a href="account.html">Account</a></li><li><a href="checkout.html">Checkout</a></li></ul></div>
+<div><h4>Company & Policies</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="how-it-works.html">How It Works</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms & Conditions</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="shipping.html">Shipping Policy</a></li><li><a href="returns.html">30-Day Return Policy</a></li></ul></div>
+</div>
+<div class="container footer-bottom"><p>© 2026 HARSH CHAUHAN. All rights reserved.</p>
+<p><strong>Third-Party Non-Affiliation Disclaimer:</strong> HARSH CHAUHAN is an independent informational resource. We are not affiliated with, endorsed by, sponsored by, or associated with Duke Energy or any of its subsidiaries. All trademarks, service marks, logos, and brand names—including “Duke Energy”—are the property of their respective owners and are used on this website strictly for nominative, identification, and informational purposes only.</p></div>
+</footer><script>document.addEventListener("DOMContentLoaded",()=>renderShop("#shopProducts"));</script>
+  
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a87cbc8bd880f344ae7d648/1k0h782fj';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+  
+  </body></html>
